@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="twitter.jquery.js"></script>
+    <script type="text/javascript" src="timesince.jquery.js"></script>
+    
+    <style type="text/css" media="screen">
+		body{ font-family:Arial, Helvetica, sans-serif; }
+		#tweet_container img{ max-height:200px; max-width:200px;}
+		.tweet{ padding:10px; }
+	</style>
+    
+    <script>
+    $(document).ready( function(){
+		// This is a chainable Plugin so you can have multiple instances,
+		// and in the next version i will add live updating.
+		$('#twitter_feed_fill').twitterFill({
+			// You can pass the requested twitter username to pull from.
+			'accountName'	:	'stump201',
+		});
+		
+	})
+    </script>
+    
+    <title>Twitter Test</title>
+    
+    
+</head>
+
+<body>
+
+	<header>
+    	<h1>Twitter Test</h1>
+    </header>
+    
+    <div id="tweet_container">
+    	<div id="dump"></div>
+        
+        <img src="img_default.png" id="user_img" />
+        
+    	<!-- This is the target DOM object, you simply address the id of the object to the plugin. -->
+    	<div id="twitter_feed_fill"></div>
+        
+    </div>
+    
+    <footer>
+    </footer>
+    
+</body>
+</html>
